@@ -6,18 +6,14 @@ WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-COPY app.py /app/app.py
-COPY requirements.txt /app/requirements.txt
-COPY model_data/boston_housing_prediction.joblib /app/model_data/boston_housing_prediction.joblib
-COPY . templates/ /app/templates/
+COPY . app.py /app/
+COPY ./model_data /app/
 
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN make setup 
-RUN source ~/.devops/bin/activate
-RUN make install
-RUN make lint
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
 ## Step 4:
 # Expose port 80
