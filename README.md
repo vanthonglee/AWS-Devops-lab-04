@@ -58,19 +58,16 @@ source .devops/bin/activate
 
 ### Files included:
 
-* `.circleci` - circleci config scripts
-* `model_data` - ML model related data (model, csv data)
-* `output_txt_files` - project output files for docker and kubernetes
-    * `docker_out.txt` - run_docker.sh output
-    * `docker_prediction_out.txt` - make_prediction.sh output while running docker
-    * `kubernetes_container_logs.txt` - kubectl logs output for the pod
-    * `kubernetes_out.txt` - run_kubernetes.sh output
-    * `kubernetes_prediction_out.txt` - make_prediction.sh output while running k8s pod
-* `app.py` - python web application file
-* `Dickerfile` - docker image config
-* `make_prediction.sh` - make prediction HTTP call script
-* `Makefile` - for install dependencies, check file code (install, test, lint steps)
-* `requirements.txt` - web application dependencies for example python, libraries etc.
-* `run_docker.sh` - run docker container
-* `run_kubernetes.sh` - run kubernetes pod for the web app
-*  `upload_docker.sh` - upload docker image to docker hub
+* `.circleci` : CircleCI configuration
+* `model_data` : ML model related data (model, csv data)
+* `output_txt_files` : Project output files for docker and kubernetes
+    * `docker_out.txt` : Run_docker.sh output
+    * `kubernetes_out.txt` : Run_kubernetes.sh output
+* `app.py`
+* `Dickerfile`
+* `make_prediction.sh` : The script to make prediction HTTP call 
+* `Makefile` : For install dependencies, check file code (install, test, lint steps)
+* `requirements.txt` : To manage dependencies in python
+* `run_docker.sh` : Run docker container
+* `run_kubernetes.sh` : Run k8s pod for the web app
+*  `upload_docker.sh` : Upload docker image to docker hub
