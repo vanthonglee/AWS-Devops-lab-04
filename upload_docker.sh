@@ -6,10 +6,14 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath="thonglevan131/udacity-aws-devops-lab-04"
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login
+docker image tag udacity-aws-devops-lab-04:latest $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker image push $dockerpath
