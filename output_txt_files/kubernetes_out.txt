@@ -1,1 +1,8 @@
 <paste log output from Kubernetes-mediated prediction, here>
+➜  AWS-Devops-lab-04 git:(main) ✗ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
