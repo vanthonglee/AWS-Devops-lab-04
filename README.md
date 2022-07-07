@@ -1,5 +1,7 @@
 <include a CircleCI status badge, here>
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/vanthonglee/AWS-Devops-lab-04/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/vanthonglee/AWS-Devops-lab-04/tree/main)
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
@@ -42,9 +44,33 @@ source .devops/bin/activate
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+### Docker
+
+1. Publish docker image: `./upload_docker.sh`
+
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+
+### Files included:
+
+* `.circleci` - circleci config scripts
+* `model_data` - ML model related data (model, csv data)
+* `output_txt_files` - project output files for docker and kubernetes
+    * `docker_out.txt` - run_docker.sh output
+    * `docker_prediction_out.txt` - make_prediction.sh output while running docker
+    * `kubernetes_container_logs.txt` - kubectl logs output for the pod
+    * `kubernetes_out.txt` - run_kubernetes.sh output
+    * `kubernetes_prediction_out.txt` - make_prediction.sh output while running k8s pod
+* `app.py` - python web application file
+* `Dickerfile` - docker image config
+* `make_prediction.sh` - make prediction HTTP call script
+* `Makefile` - for install dependencies, check file code (install, test, lint steps)
+* `requirements.txt` - web application dependencies for example python, libraries etc.
+* `run_docker.sh` - run docker container
+* `run_kubernetes.sh` - run kubernetes pod for the web app
+*  `upload_docker.sh` - upload docker image to docker hub
