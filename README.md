@@ -1,5 +1,3 @@
-<include a CircleCI status badge, here>
-
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/vanthonglee/AWS-Devops-lab-04/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/vanthonglee/AWS-Devops-lab-04/tree/main)
 
 ## Project Overview
